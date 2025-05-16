@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffd6e8, #fff0f5);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: #3d2c41;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  color: #b4005f;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #ff4081, #f06292);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #f50057, #ec407a);
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cake-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+#cake {
+  width: 200px;
+}
+
+#candle {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+}
+
+.glow {
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px yellow);
+  }
+  to {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 5px orange);
+  }
+}
+
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: float 8s infinite ease-in;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    top: 100vh;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: -10vh;
+    left: calc(50% + 100px);
+    opacity: 0;
+  }
+}
+
+.slideshow {
+  max-width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.slide {
+  width: 80%;
+  display: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  margin-top: 20px;
+}

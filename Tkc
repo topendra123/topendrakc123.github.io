@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday My Love</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="birthday-music.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Floating hearts -->
+  <div class="hearts-container">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <div id="greeting" class="fade-in">
+    <h1>Happy Birthday, My Love <i class="fas fa-heart" style="color: red;"></i></h1>
+    <p>You make my world brighter just by being in it.</p>
+    <button onclick="showCake()">Let's cut the cake</button>
+  </div>
+
+  <div id="cake-section" class="hidden fade-in">
+    <div class="cake-container">
+      <img src="cake.png" alt="Cake" id="cake">
+      <img src="candle.png" alt="Candle" id="candle" class="glow">
+    </div>
+    <button onclick="blowCandle()">Blow the candle</button>
+  </div>
+
+  <div id="gallery" class="hidden fade-in">
+    <h2>Our Golden Memories</h2>
+    <div class="slideshow">
+      <img src="photo1.jpg" class="slide" alt="Slide 1">
+      <img src="photo2.jpg" class="slide" alt="Slide 2">
+      <img src="photo3.jpg" class="slide" alt="Slide 3">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
